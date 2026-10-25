@@ -1,0 +1,92 @@
+/* HCM — Print Stylesheet */
+/* Clean A4 black-on-white formatting for payslips and month summary reports */
+
+@media print {
+  @page {
+    size: A4;
+    margin: 15mm 15mm 15mm 15mm;
+  }
+
+  *, *::before, *::after {
+    background: transparent !important;
+    color: #000000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  body {
+    background: #FFFFFF !important;
+    color: #000000 !important;
+    font-size: 11pt;
+    line-height: 1.35;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* Hide navigation, buttons, toast, modal, shell */
+  #shell,
+  .shell-header,
+  .bottom-tab-bar,
+  .skip-link,
+  #toast-root,
+  #modal-root,
+  .header-actions,
+  .btn,
+  .no-print,
+  .tabs-pill {
+    display: none !important;
+  }
+
+  .container {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .payslip-paper {
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+  }
+
+  .payslip-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 12pt !important;
+  }
+
+  .payslip-row {
+    border-bottom: 1pt solid #CCCCCC !important;
+    padding: 4pt 0 !important;
+  }
+
+  .payslip-net-box {
+    border: 1pt solid #000000 !important;
+    padding: 8pt !important;
+    margin-top: 12pt !important;
+  }
+
+  .table-wrapper {
+    border: 1pt solid #CCCCCC !important;
+    border-radius: 0 !important;
+    overflow: visible !important;
+  }
+
+  .data-table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+  }
+
+  .data-table th,
+  .data-table td {
+    border: 1pt solid #CCCCCC !important;
+    padding: 4pt 6pt !important;
+    font-size: 9pt !important;
+  }
+
+  .data-table tr {
+    page-break-inside: avoid;
+  }
+}

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HCM — Sign In & Setup</title>
+  <script src="js/theme-boot.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..700&family=Instrument+Sans:wght@400..700&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <main id="main" class="split-page">
+    <div class="split-intro">
+      <div>
+        <div id="intro-brand" style="margin-bottom: var(--s-5);"></div>
+        <h1 style="font-size: 2.25rem; margin-bottom: var(--s-4); max-width: 440px;">HR for a small team: attendance, leave, and payslips in one place.</h1>
+        <p style="color: var(--text-2); font-size: 1rem; line-height: 1.5; max-width: 440px; margin-bottom: var(--s-6);">
+          Designed for clarity and speed. Every attendance minute, leave request, and salary calculation is tracked directly in your browser.
+        </p>
+
+        <div style="display: flex; flex-direction: column; gap: var(--s-4); max-width: 440px;">
+          <div style="background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-md); padding: var(--s-4);">
+            <div style="display: flex; align-items: center; gap: var(--s-2); font-weight: 600; margin-bottom: var(--s-1);">
+              <span style="color: var(--accent); font-size: 0.8125rem;">ADMIN</span>
+              <span>Full control & oversight</span>
+            </div>
+            <p style="font-size: 0.8125rem; color: var(--text-2);">
+              Manage staff, define attendance thresholds, approve leaves with comments, inspect daily registers, and generate monthly payslips.
+            </p>
+          </div>
+
+          <div style="background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-md); padding: var(--s-4);">
+            <div style="display: flex; align-items: center; gap: var(--s-2); font-weight: 600; margin-bottom: var(--s-1);">
+              <span style="color: var(--accent); font-size: 0.8125rem;">EMPLOYEE</span>
+              <span>Self-service portal</span>
+            </div>
+            <p style="font-size: 0.8125rem; color: var(--text-2);">
+              One-click daily check-in, live worked hours, leave balance tracking, personal calendar, and printable payslips.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top: var(--s-6); display: flex; align-items: center; justify-content: space-between; font-size: 0.8125rem; color: var(--text-3);">
+        <span>Saylani Hackathon 2026 — Beginner Track</span>
+        <button type="button" class="icon-btn theme-toggle-btn" aria-label="Toggle theme" id="intro-theme-toggle"></button>
+      </div>
+    </div>
+
+    <div class="split-form-col">
+      <div id="auth-container" class="auth-box"></div>
+    </div>
+  </main>
+
+  <div id="toast-root" aria-live="polite"></div>
+  <div id="modal-root"></div>
+
+  <script src="js/icons.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/company.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/pages/index.js"></script>
+</body>
+</html>
